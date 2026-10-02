@@ -1,0 +1,74 @@
+{
+  "result": "PASS",
+  "locale": "th",
+  "checks": [
+    "Thai required-field validation",
+    "Create Thai book via form",
+    "Edit status via PATCH",
+    "Filter via query string",
+    "View single record",
+    "Confirm and delete",
+    "No reload during CRUD",
+    "No JavaScript errors",
+    "No horizontal overflow at 390px"
+  ],
+  "documentNavigations": 1,
+  "browserErrors": [],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/api/books",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/books",
+      "status": 201
+    },
+    {
+      "method": "GET",
+      "path": "/api/books",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/books/dae5b178-7d70-413c-b929-92a21378e8eb",
+      "status": 200
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/books/dae5b178-7d70-413c-b929-92a21378e8eb",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/books",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/books?status=finished",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/books/dae5b178-7d70-413c-b929-92a21378e8eb",
+      "status": 200
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/books/dae5b178-7d70-413c-b929-92a21378e8eb",
+      "status": 204
+    },
+    {
+      "method": "GET",
+      "path": "/api/books?status=finished",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/api/books",
+      "status": 200
+    }
+  ]
+}

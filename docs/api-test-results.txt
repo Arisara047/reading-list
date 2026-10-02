@@ -1,0 +1,50 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> reading-list@1.0.0 test
+> node --test tests/api.test.js
+
+GET /api/books 200
+▶ REST API: CRUD, validation, filters, persistence and error responses
+  ✔ GET collection returns 200 and an empty array (41.213286ms)
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+POST /api/books 400
+  ✔ POST rejects missing, blank and non-string fields with 400 (23.434859ms)
+POST /api/books 201
+  ✔ POST returns 201, a Location header and generated ID (3.714707ms)
+GET /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 200
+  ✔ GET route parameter returns the matching book (5.490755ms)
+PATCH /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 200
+  ✔ PATCH changes only submitted fields and returns 200 (3.501192ms)
+GET /api/books?status=finished 200
+GET /api/books?status=reading 200
+GET /api/books?status=invalid 400
+  ✔ GET query filter includes matches and excludes other statuses (6.165624ms)
+PATCH /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 400
+PATCH /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 400
+PATCH /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 400
+PATCH /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 400
+  ✔ PATCH rejects empty body, unknown fields and long text (7.691402ms)
+GET /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 200
+  ✔ Saved data survives a fresh app instance (4.712174ms)
+GET /api/books/missing 404
+PATCH /api/books/missing 404
+DELETE /api/books/missing 404
+  ✔ Unknown IDs return 404 for GET, PATCH and DELETE (8.426861ms)
+POST /api/books 400
+  ✔ Malformed JSON returns 400 (3.200456ms)
+DELETE /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 204
+GET /api/books/4ae99c35-5170-4141-9719-f0986c3ab3f6 404
+  ✔ DELETE returns 204 with no body; subsequent GET returns 404 (3.764621ms)
+✔ REST API: CRUD, validation, filters, persistence and error responses (113.383443ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 217.642108

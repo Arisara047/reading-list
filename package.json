@@ -1,0 +1,25 @@
+{
+  "name": "reading-list",
+  "version": "1.0.0",
+  "description": "Personal reading list with Express REST API",
+  "main": "server/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "start": "node server/index.js",
+    "test": "node --test tests/api.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
